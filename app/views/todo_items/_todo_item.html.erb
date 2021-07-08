@@ -1,6 +1,6 @@
 <div class="row clearfix">
 		<div class="todo_item">
 			<p style="opacity: 0.4;"><%= todo_item.content %></p>
-			<%= link_to 'delete' , todo_list_todo_item_path(@todo_list ,todo_item.id) , method: :delete %>
+			<p><%= link_to 'delete' , todo_list_todo_item_path(@todo_list ,todo_item.id) , method: :delete %></p>
 		</div>
 </div>
