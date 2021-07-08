@@ -6,6 +6,7 @@ class TodoListsController < ApplicationController
     end
     
     def create
+        puts "create called"
         @todo_list = TodoList.new(todo_list_params)
         respond_to do |format|
             if @todo_list.save
@@ -17,15 +18,12 @@ class TodoListsController < ApplicationController
             end
         end
     end
-    
-    def show
-    end
-
     def new
         @todo_list = TodoList.new
     end
 
     def update
+        puts "update called"
         respond_to do |format|
             if @todo_list.update(todo_list_params)
               format.html { redirect_to @todo_list, notice: 'Todo list was successfully updated.' }
